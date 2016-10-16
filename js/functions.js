@@ -1,94 +1,5 @@
 "use strict";
 
-function sideMenu() {
-
-// [0] First Effect - Basic slide from left edge
-// [1] Second Effect - First Effect + shadow on site
-// [2] Third Effect - First Effect + push content
-// [3] Fourth Effect - Push content and show menu
-
-  // var trigger  = document.querySelector(".--open"),         // [0] trigger
-  //     /*trigger2 = document.querySelector(".--open-2"),       // [1] trigger
-  //     trigger3 = document.querySelector(".--open-3"),       // [2] trigger
-  //     trigger4 = document.querySelector(".--open-4"),       // [3] trigger*/
-  //     close    = document.querySelector(".--close"),        // [ALL] close trigger
-
-  //     mask     = document.querySelector(".mask"),
-  //     //pusher   = document.querySelector(".section__container"),
-  //     menuBody = "section__menu-body",
-  //     menu     = document.querySelector("." + menuBody),
-  //     // pushMenu = document.querySelector(".--pushed"),
-  //     wrapper  = document.querySelector(".wrapper"),
-  //     // html     = document.querySelector("html"),
-  //     // nextSlide = document.querySelector("#nextSlide"),
-      
-  //     // [0] Showing menu
-  //     show =
-  //       function showMenu() {
-  //         menu.className += "  --active";
-  //         mask.className += "  --shadow";
-  //         wrapper.className += "  --push";
-  //         // html.className += "  --noScroll";
-  //       },
-
-  //     // [1] Show menu with shadow on content
-  //     // showShadow = 
-  //     //   function showMenuWithShadow() {
-  //     //     show();
-  //     //     mask.className += "  --shadow";
-  //     //   },
-
-  //     // [2] Show menu with push content
-  //     // showPush = 
-  //     //   function showMenuPush() {
-  //     //     show();
-  //     //     pusher.className += "  --push";
-  //     //   },
-
-  //     // [3] Push content and show menu
-  //     // pushBeforeShow =
-  //     //   function menuPush() {
-  //     //     wrapper[1].style.marginLeft = 240 + "px";
-  //     //   },
-      
-  //     // [ALL] Hide menu with all effects
-  //     hide = 
-  //       function hideMenu() {
-  //         menu.className = menuBody;
-  //         mask.className = "mask";
-  //         wrapper.className = "wrapper";
-  //         // pusher.className = "section__container";
-  //         // wrapper[1].style.marginLeft = 0;
-  //       };
-
-  //     // changeSlide =
-  //     //   function newSlide() {
-  //     //     wrapper[0].className += "  --fadeIn  --currentSlide";
-  //     //     wrapper[0].style.visibility = "hidden";
-  //     //     wrapper[1].className += "  --currentSlide";
-  //     //   },
-      
-  //     // removeSlide =
-  //     //   function backSlide() {
-  //     //     wrapper[1].className += "  --backSlide";
-  //     //   };
-
-  // trigger.addEventListener("click", show);          // [0] Show menu event
-
-  // // trigger2.addEventListener("click", showShadow);   // [1] Show menu event
-  
-  // // trigger3.addEventListener("click", showPush);     // [2] Show menu event
-
-  // // trigger4.addEventListener("click", pushBeforeShow); // [3] Push content before show
-
-  // // nextSlide.addEventListener("click", changeSlide);
-
-  // close.addEventListener("click", hide);            // [ALL] Hide menu event
-
-  // mask.addEventListener("click", hide);             // [1] Hide menu event
-
-}
-
 function slideShow() {
 
   var slides       =  document.querySelectorAll(".slide");
@@ -121,5 +32,27 @@ function slideShow() {
   });
 }
 
-sideMenu();
+function modal() {
+  var modalOn     = document.querySelector(".--modal--on"),
+      modalOff    = document.querySelector(".--modal--off"),
+      modal       = document.querySelector(".modal"),
+      wrapper     = document.querySelector(".wrapper"),
+
+      show = 
+        function showModal() {
+          modal.className   += "  --show";
+          wrapper.className += "  --shadow";
+        },
+
+      hide = 
+        function hideModal() {
+          modal.className   = "modal";
+          wrapper.className = "wrapper";
+        };
+
+      modalOn.addEventListener("click", show);
+      modalOff.addEventListener("click", hide);
+}
+
 slideShow();
+modal();

@@ -422,10 +422,7 @@ html {
   margin: 0 auto;
   padding: 0;
   transition: all, 0.5s, linear;
-  -webkit-transition: all, 0.5s, linear;
-  -moz-transition: all, 0.5s, linear;
-  -o-transition: all, 0.5s, linear;
-  -ms-transition: all, 0.5s, linear; }
+  -webkit-transition: all, 0.5s, linear; }
 
 a {
   color: #495057; }
@@ -454,10 +451,7 @@ body {
     animation: toTop .6s ease both; }
   .wrapper.--backSlide {
     transform: translateY(100vh);
-    -webkit-transform: translateY(100vh);
-    -moz-transform: translateY(100vh);
-    -o-transform: translateY(100vh);
-    -ms-transform: translateY(100vh); }
+    -webkit-transform: translateY(100vh); }
 
 .header__container,
 .section__container {
@@ -518,16 +512,10 @@ body {
   .navigation__item.--disable:hover {
     opacity: 0;
     transform: rotateY(-180deg);
-    -webkit-transform: rotateY(-180deg);
-    -moz-transform: rotateY(-180deg);
-    -o-transform: rotateY(-180deg);
-    -ms-transform: rotateY(-180deg); }
+    -webkit-transform: rotateY(-180deg); }
     .navigation__item.--disable:hover:nth-of-type(odd) {
       transform: rotateY(180deg);
-      -webkit-transform: rotateY(180deg);
-      -moz-transform: rotateY(180deg);
-      -o-transform: rotateY(180deg);
-      -ms-transform: rotateY(180deg); }
+      -webkit-transform: rotateY(180deg); }
   .navigation__item:first-of-type {
     margin-left: 0; }
 
@@ -564,17 +552,11 @@ button {
   top: 0;
   transform: translateX(-340px);
   -webkit-transform: translateX(-340px);
-  -moz-transform: translateX(-340px);
-  -o-transform: translateX(-340px);
-  -ms-transform: translateX(-340px);
   z-index: 20;
   perspective: 1000px; }
   .section__menu-body.--active, .section__menu-body.--pushed {
     transform: translateX(0);
-    -webkit-transform: translateX(0);
-    -moz-transform: translateX(0);
-    -o-transform: translateX(0);
-    -ms-transform: translateX(0); }
+    -webkit-transform: translateX(0); }
   .section__menu-body.--pushed {
     z-index: 0; }
   .section__menu-body::after {
@@ -643,17 +625,11 @@ button {
 
 .--push {
   transform: translateX(80px);
-  -webkit-transform: translateX(80px);
-  -moz-transform: translateX(80px);
-  -o-transform: translateX(80px);
-  -ms-transform: translateX(80px); }
+  -webkit-transform: translateX(80px); }
 
 .--pusher {
   transform: translateX(240px);
-  -webkit-transform: translateX(240px);
-  -moz-transform: translateX(240px);
-  -o-transform: translateX(240px);
-  -ms-transform: translateX(240px); }
+  -webkit-transform: translateX(240px); }
 
 /***************** Side Navigation >>****************/
 body {
@@ -737,31 +713,99 @@ body {
 @keyframes bottom {
   from {
     transform: translate3d(0, 0, 300px) scale(0.4);
-    -webkit-transform: translate3d(0, 0, 300px) scale(0.4);
-    -moz-transform: translate3d(0, 0, 300px) scale(0.4);
-    -o-transform: translate3d(0, 0, 300px) scale(0.4);
-    -ms-transform: translate3d(0, 0, 300px) scale(0.4); }
+    -webkit-transform: translate3d(0, 0, 300px) scale(0.4); }
   to {
     transform: translate3d(0, 0, 0) scale(1);
-    -webkit-transform: translate3d(0, 0, 0) scale(1);
-    -moz-transform: translate3d(0, 0, 0) scale(1);
-    -o-transform: translate3d(0, 0, 0) scale(1);
-    -ms-transform: translate3d(0, 0, 0) scale(1); } }
+    -webkit-transform: translate3d(0, 0, 0) scale(1); } }
 
 @keyframes top {
   from {
     transform: translate3d(0, 0, 0) scale(1);
-    -webkit-transform: translate3d(0, 0, 0) scale(1);
-    -moz-transform: translate3d(0, 0, 0) scale(1);
-    -o-transform: translate3d(0, 0, 0) scale(1);
-    -ms-transform: translate3d(0, 0, 0) scale(1); }
+    -webkit-transform: translate3d(0, 0, 0) scale(1); }
   to {
     transform: translate3d(0, 0, 300px) scale(0.4);
-    -webkit-transform: translate3d(0, 0, 300px) scale(0.4);
-    -moz-transform: translate3d(0, 0, 300px) scale(0.4);
-    -o-transform: translate3d(0, 0, 300px) scale(0.4);
-    -ms-transform: translate3d(0, 0, 300px) scale(0.4); } }
+    -webkit-transform: translate3d(0, 0, 300px) scale(0.4); } }
 
 .--current {
   z-index: 20;
   animation: bottom 1s ease both; }
+
+.wrapper:nth-of-type(1) {
+  background: #f8f9fa;
+  top: -20px; }
+
+.wrapper.--shadow {
+  background: #adb5bd; }
+
+.wrapper__header {
+  display: flex;
+  flex-direction: column;
+  top: 3rem;
+  text-align: center;
+  font-family: "Montserrat", sans-serif; }
+
+.--modal--on {
+  display: inline-block;
+  color: #e03131;
+  font-weight: bold;
+  text-transform: uppercase;
+  top: 1rem;
+  border-bottom: 2px solid #e03131;
+  padding-bottom: 10px;
+  cursor: pointer; }
+  .--modal--on:hover {
+    font-size: 0.9rem;
+    color: #fa5252;
+    border-bottom: 2px solid #fa5252;
+    padding-bottom: 15px; }
+
+.modal {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 3rem;
+  max-width: 50%;
+  min-width: 50%;
+  height: auto;
+  padding: 20px;
+  background-color: #e03131;
+  border-radius: 6px;
+  border: 2px solid rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.15);
+  transform: translate3d(0, -400px, 0) scale(0.2) rotate(45deg);
+  -webkit-transform: translate3d(0, -400px, 0) scale(0.2) rotate(45deg);
+  opacity: 0; }
+
+.modal__body {
+  line-height: 2.5rem;
+  color: #f8f9fa; }
+
+.--modal--off {
+  position: absolute;
+  right: 0;
+  top: -1.5rem;
+  max-width: 2rem;
+  min-width: 2rem;
+  height: 2rem;
+  line-height: 2rem;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.15);
+  border-radius: 50%; }
+  .--modal--off:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1); }
+
+.modal__title {
+  font-family: "Montserrat", sans-serif; }
+
+.modal__content {
+  font-family: 'Roboto', sans-serif;
+  font-weight: normal;
+  font-size: 1.1rem;
+  letter-spacing: .04rem; }
+
+.--show {
+  transform: translate3d(0, 0, 0) scale(1) rotate(0deg);
+  -webkit-transform: translate3d(0, 0, 0) scale(1) rotate(0deg);
+  opacity: 1; }
